@@ -6,6 +6,7 @@ import '@/styles/globals.css';
 import '@/styles/colors.css';
 
 import { siteConfig } from '@/constant/config';
+import NavBar from '@/components/NavBar';
 
 // !STARTERCONF Change these default meta
 // !STARTERCONF Look at @/constant/config to change them
@@ -55,7 +56,10 @@ export default function RootLayout({
 }) {
   return (
     <html>
-      <body>{children}</body>
+      <body data-theme='dark'>
+        <NavBar />
+        <main className='p-5 text-white'>{children}</main>
+      </body>
     </html>
   );
 }
